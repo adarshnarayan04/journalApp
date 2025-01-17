@@ -17,8 +17,9 @@ import org.springframework.web.bind.annotation.*;
 import java.util.*;
 import java.util.stream.Collectors;
 
-@RestController
-@RequestMapping("/journal")
+@RestController//tell spring that this class is a controller
+@RequestMapping("/journal")//at the request of /journal, this controller will be called(like done in index js , call the particalur route and in the route we define the controller)
+//but here route and controller are defined together
 @Tag(name = "Journal APIs")
 public class JournalEntryController {
 
@@ -28,7 +29,9 @@ public class JournalEntryController {
     @Autowired
     private UserService userService;
 
-    @GetMapping
+    @GetMapping//for get request ( at the request of /journal, this controller will be called)
+    //as no value is given in getMapping, so it will be called at /journal
+    // "/journal" is the route of this class
     @Operation(summary = "Get all journal entries of a user")
     public ResponseEntity<?> getAllJournalEntriesOfUser() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
@@ -53,7 +56,7 @@ public class JournalEntryController {
         }
     }
 
-    @GetMapping("id/{myId}")
+    @GetMapping("id/{myId}")//for get request ( at the request of /journal/id/{myId}, this controller will be called)
     public ResponseEntity<?> getJournalEntryById(@PathVariable String myId) {
         ObjectId objectId = new ObjectId(myId);
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();

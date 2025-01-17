@@ -1,0 +1,22 @@
+mvn validate --> to check the maven
+
+if maven not installed can use the maven provided by the spring boot
+./mvnw 
+
+./mnnw package  --> crete the jar in the target folder
+.jar  ---> have all the file in it , just run it ( more in size)
+.jar.orginal  --> only have all the compiled code , not the dependecy in it
+
+-- writing mvn instad of ./mvnw
+
+mvn clean ----> delete the target folder
+
+
+create new package ( click on new pacakge and write the name of the folder)
+ inside the journla app src/main/java/net/engineeringdigest/journalApp
+
+ then create a class inside (using crete new class) inside the controller folder
+
+
+ run the appilcation:
+ ./mvnw spring-boot:run
