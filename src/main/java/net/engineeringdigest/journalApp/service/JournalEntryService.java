@@ -21,7 +21,7 @@ import java.util.Optional;
 public class JournalEntryService {
 
     @Autowired
-    private JournalEntryRepository journalEntryRepository;
+    private JournalEntryRepository journalEntryRepository;//create the object of the class of JournalEntryRepository which create the class using the model (defined in entity folder JournalEntry.java)
 
     @Autowired
     private UserService userService;

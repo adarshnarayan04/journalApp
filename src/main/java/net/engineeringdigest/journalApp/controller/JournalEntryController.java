@@ -24,7 +24,7 @@ import java.util.stream.Collectors;
 public class JournalEntryController {
 
     @Autowired
-    private JournalEntryService journalEntryService;
+    private JournalEntryService journalEntryService;//created the object of the class ( it is degined in re)
 
     @Autowired
     private UserService userService;
